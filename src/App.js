@@ -14,7 +14,7 @@ class App extends Component {
       <Router>
         <div className="App">
           <Sidebar />          
-          <Route exact path="/">
+          <Route exact path={process.env.PUBLIC_URL}>
             <Home />
           </Route>
           <Route exact path="/about">

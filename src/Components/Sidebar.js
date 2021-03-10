@@ -11,7 +11,7 @@ class Sidebar extends Component {
             navlinks: [
                 {
                     item: 'Home',
-                    path: '/'
+                    path: process.env.PUBLIC_URL
                 },
                 {
                     item: 'About',
