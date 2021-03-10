@@ -11,23 +11,23 @@ class Sidebar extends Component {
             navlinks: [
                 {
                     item: 'Home',
-                    path: '/'
+                    path: '/resume'
                 },
                 {
                     item: 'About',
-                    path: '/about'
+                    path: '/resume/about'
                 },
                 {
                     item: 'Education',
-                    path: '/education'
+                    path: '/resume/education'
                 },
                 {
                     item: 'Skills',
-                    path: '/skills'
+                    path: '/resume/skills'
                 },
                 {
                     item: 'Contact',
-                    path: '/contact'
+                    path: '/resume/contact'
                 }
             ]
         }
