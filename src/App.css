@@ -1,38 +1,166 @@
+@import url("https://fonts.googleapis.com/css?family=Raleway:300,400,500,700&display=swap");
+:root {
+  --sidebar-flex: 1.5;
+  --condiv-flex: 6;
+  --fontsize-p: 1.2rem;
+  --fontsize-nav: 1.6rem;
+  --typing-font: 3rem;
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: "Raleway";
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  margin: 10px;
+  font-weight: 400;
+}
+
+.active {
+  font-weight: bolder;
+}
+
+/* App Styles */
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  width: 100vw;
+  min-height: 100vh;
+}
+
+/* .condiv class is for the right side content container*/
+.condiv {
+  padding: 100px;
+  background-color: #f4f5f9;
+  flex: var(--condiv-flex);
+}
+
+/* Nav/Navbar styling */
+nav {
+  padding: 60px 30px 0px 30px;
+  flex: var(--sidebar-flex);
+  background: #000;
+  height: 100%;
+  /* background: rgb(238, 103, 143); */
+  /* background: linear-gradient(
+    180deg,
+    rgba(238, 103, 143, 1) 50%,
+    rgba(132, 124, 252, 1) 80%
+  ); */
+}
+
+nav ul {
+  font-size: var(--fontsize-nav);
+  text-align: center;
+  list-style-type: none;
+  text-decoration: none;
+  color: white !important;
+  display: block;
+}
+nav ul li {
+  color: #fff;
+  margin: 40px;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 20px;
+}
+
+.menubtn {
+  display: none;
+}
+
+@media (max-width: 730px) {
+  nav {
+    display: none;
+  }
+
+  /* on click add .show class */
+  .show {
+    display: block;
+    position: absolute;
+    width: 100%;
+    padding: 0;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .menubtn {
+    display: block;
+    position: absolute;
+    right: 0;
+  }
+
+  .menubtn .fas:before {
+    font-size: 28px;
+  }
+}
+
+/* @media (max-width: 520px) {
+  .respond
+} */
+
+/* Wildcard */
+.widecard {
+  border: 0px solid #9a9b9c;
+  display: flex;
+  margin: 30px 0px 30px 0px;
+}
+.widecard:hover {
+  color: #1b1d20;
+  background-color: #ffffff;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+}
+
+/* Home Page */
+.social {
+  margin-top: 20px;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  display: flex;
+  bottom: 60px;
 }
 
-.App-link {
-  color: #61dafb;
+.typingeffect {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+  margin-bottom: 40px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.typingeffect .animatedtype {
+  font-size: 22px;
+}
+
+.social i {
+  padding-right: 30px;
+  font-size: 25px;
+  color: #9a9b9c;
+}
+.social i:hover {
+  color: #ffffff;
+}
+
+/* About Page */
+.subtopic {
+  margin: 10px 10px 30px 10px !important;
+}
+p {
+  font-size: var(--fontsize-p);
+}
+h1,
+h2,
+h3,
+h4,
+p {
+  margin: 10px;
 }
